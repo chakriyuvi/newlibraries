@@ -18,10 +18,6 @@ def newselenium(jobname)
   sh "java -jar /home/ubuntu/.jenkins/workspace/${jobname}/testing.jar"
 }
 
-def newdelivery(jobname,ip,context)
-{
-   sh label: '', script: "scp /home/ubuntu/.jenkins/workspace/${jobname}/webapp/target/webapp.war ubuntu@${ip}:/var/lib/tomcat9/webapps/${prapp}.war"  
-}
 
 
 
